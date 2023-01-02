@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- 
+<style>
+    table,
+    tr,
+    td,
+    th {
+    border: 1px solid green;
+    }
+</style> -->
+
+<table>
+    <tr>
+      <th>Name</th>
+      <th>price</th>
+      <th>Model</th>
+      <th>image</th>
+    </tr>
+    {% for ele in cars %}
+    <tr>
+      <td>{{ele.name}}</td>
+      <td>{{ele.price}}</td>
+      <td>{{ele.model}}</td>
+      <!-- <td>{{ele.image}}</td> -->
+      <td>
+        <img src="{{ele.image.url}}" alt="image" />
+      </td>
+    </tr>
+    {% endfor %} 
+  </table>
+
+  <!-- <h1>{{car}}</h1> # bta3t get--> 
+
+<h1 style="color : rgb(255, 0, 191)">hello from pages/cars.html</h1> 
+
+{% endblock %}
